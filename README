@@ -1,6 +1,1 @@
-BRANCH master
-
-If you see this you need to move to the
-"working" branch
-
-git checkout working
+BRANCH working
