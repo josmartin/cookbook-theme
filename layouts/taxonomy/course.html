@@ -1,0 +1,13 @@
+{{ $baseurl := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+
+
+  <div class="container">
+    <div class="section">
+
+{{ partial "recipe_grid.html" . }}    
+
+    </div>
+  </div>
+{{ partial "footer.html" . }}

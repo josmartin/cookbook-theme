@@ -1,0 +1,141 @@
+/* Custom Stylesheet */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	/* the bottom margin must be the negative value of the footer's height */
+	margin: 0 auto -85px; 
+}
+
+footer.page-footer, .push {
+  margin: 0px;
+  height: 85px;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+@media only screen and (max-width : 993px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  .container {
+    width: 80%;
+  }  
+}
+
+@media only screen and (max-width : 601px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .container {
+    width: 90%;
+  }  
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+a.sitename {
+	color: white;
+}
+
+a.sitename:hover {
+	color: white;
+	text-decoration: underline;	
+}
+
+.copywrite-text {
+	color: white;
+	font-weight: bold;
+	font-family: courier;
+	font-size: 18pt;
+}
+
+
+.search-overlay {
+	height: 0px;
+	box-sizing: border-box;	
+	clear:both;
+}
+
+.no-margin {
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+
+.recipe-grid {
+    border: 1px solid lightgrey;
+    margin-top: -1px;
+    margin-right: -1px;
+    text-align: center;
+}
+
+.recipe-grid-item {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.small-flow-text {
+    font-size: 14pt;
+}
+
+.recipe-grid:hover {
+    background-color: #ddd;
+}
+.search {
+}
+
+.gsc-search-box * {
+	box-sizing: initial;
+	padding-top:0;
+	padding-bottom:0;	
+}
+
+.gsc-search-box a {
+	height: auto;
+	width: auto;
+	line-height: normal;
+	padding-left:0;
+	padding-right:0;
+}
