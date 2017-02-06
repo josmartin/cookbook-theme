@@ -4,9 +4,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>{{ .Title }}</title>
-  <link href="{{.Site.BaseURL}}/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{{.Site.BaseURL}}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" media="screen,projection">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+  <link href="{{.Site.BaseURL}}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style type="text/css">
   {{if .Site.Params.footerCover}}
     footer.page-footer{background-image: url({{.Site.BaseURL}}/{{.Site.Params.footerCover}});}
@@ -17,16 +19,20 @@
 </head>
 <body>
 <div class="wrapper">
-  <ul id="slide-out" class="side-nav">
-    <li><a href="{{.Site.BaseURL}}"><i class="mdi-action-home left"></i>Home<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
-    <li><a href="{{.Site.BaseURL}}/courses"><i class="mdi-action-view-list left"></i>Courses<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
-    <li><a href="{{.Site.BaseURL}}/tags"><i class="mdi-action-loyalty left"></i>Tags<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
+  <div id="slide-out" class="side-nav">
+  <ul>
+    <li><a href="{{.Site.BaseURL}}"><i class="material-icons left">home</i>Home<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
+    <li><a href="{{.Site.BaseURL}}/courses"><i class="material-icons left">list</i>Courses<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
+    <li><a href="{{.Site.BaseURL}}/tags"><i class="material-icons left">loyalty</i>Tags<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
   </ul>
+  <div class="left"><gcse:searchbox></gcse:searchbox></div>
+  </div>
   <div id="index-banner" class="parallax-container">
-  <a data-activates="slide-out" class="btn-floating button-collapse" style="top: 5px; left: 5px;"><i class="mdi-navigation-menu"></i></a>
+  <a data-activates="slide-out" class="btn-floating button-collapse" style="top: 5px; left: 5px;"><i class="material-icons">menu</i></a>
     <div class="section no-pad-bot">
-      <div class="container">
+	  <div class="container">
         <!-- <h1 class="header center teal-text text-lighten-2"><a href="{{.Site.BaseURL}}">{{.Site.Title}}</a></h1> -->
+		
         <h1 class="header center lighten-2">{{.Site.Title}}</h1>
         <div class="row center">
           <h5 class="header col s12 lighten-2">{{.Site.Params.description}}</h5>
@@ -62,3 +68,6 @@
     {{end}}
     </div>
   </div>
+  <div class="search-overlay">
+    <gcse:searchresults></gcse:searchresults>
+  </div>	

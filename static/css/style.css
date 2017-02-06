@@ -58,9 +58,33 @@ footer.page-footer, .push {
   height: 70px;
 }
 
+a.sitename:link {
+    color: white;
+}
+
+a.sitename:hover {
+	color: white;
+	text-decoration: underline;	
+}
+
 .copywrite-text {
 	color: white;
 	font-weight: bold;
 	font-family: courier;
 	font-size: 18pt;
+}
+
+.gsc-control-cse-en {
+	height: 0px;
+	box-sizing: border-box;
+	clear:both;	
+}
+
+.search-overlay {
+	height: 0px;
+	box-sizing: border-box;	
+	clear:both;
+}
+
+.search {
 }
