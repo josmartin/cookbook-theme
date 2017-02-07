@@ -10,6 +10,8 @@ p {
 }
 
 html, body {
+	margin: 0;
+	padding: 0;
 	height: 100%;
 }
 
@@ -28,9 +30,10 @@ html, body {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
+
+.parallax-container .section {
     width: 100%;
-  }
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -54,12 +57,12 @@ html, body {
 }
 
 footer.page-footer, .push {
-  margin: 0;
-  height: 70px;
+  margin: 0px;
+  height: 85px;
 }
 
-a.sitename:link {
-    color: white;
+a.sitename {
+	color: white;
 }
 
 a.sitename:hover {

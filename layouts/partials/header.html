@@ -25,7 +25,7 @@
     <li><a href="{{.Site.BaseURL}}/courses"><i class="material-icons left">list</i>Courses<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
     <li><a href="{{.Site.BaseURL}}/tags"><i class="material-icons left">loyalty</i>Tags<i class="mdi-hardware-keyboard-arrow-right right"></i></a></li>
   </ul>
-  <div class="left"><gcse:searchbox></gcse:searchbox></div>
+  <div class="left"><gcse:searchbox newWindow="true" gname="site-search"></gcse:searchbox></div>
   </div>
   <div id="index-banner" class="parallax-container">
   <a data-activates="slide-out" class="btn-floating button-collapse" style="top: 5px; left: 5px;"><i class="material-icons">menu</i></a>
@@ -69,5 +69,5 @@
     </div>
   </div>
   <div class="search-overlay">
-    <gcse:searchresults></gcse:searchresults>
+    <gcse:searchresults newWindow="false" gname="site-search" linkTarget="_self"></gcse:searchresults>
   </div>	
