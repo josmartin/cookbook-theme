@@ -2,7 +2,7 @@
   $(function(){
 
     $('.button-collapse').sideNav({
-		menuWidth: 300,
+		menuWidth: 250,
 		closeOnClick: false});
 		
     $('.parallax').parallax();

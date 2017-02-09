@@ -17,7 +17,13 @@ html, body {
 
 .wrapper {
 	min-height: 100%;
-	margin: 0 auto -70px; /* the bottom margin is the negative value of the footer's height */
+	/* the bottom margin must be the negative value of the footer's height */
+	margin: 0 auto -85px; 
+}
+
+footer.page-footer, .push {
+  margin: 0px;
+  height: 85px;
 }
 
 .button-collapse {
@@ -51,14 +57,8 @@ html, body {
   }
 }
 
-
 .icon-block {
   padding: 0 15px;
-}
-
-footer.page-footer, .push {
-  margin: 0px;
-  height: 85px;
 }
 
 a.sitename {
@@ -77,11 +77,6 @@ a.sitename:hover {
 	font-size: 18pt;
 }
 
-.gsc-control-cse-en {
-	height: 0px;
-	box-sizing: border-box;
-	clear:both;	
-}
 
 .search-overlay {
 	height: 0px;
@@ -90,4 +85,20 @@ a.sitename:hover {
 }
 
 .search {
+}
+
+.gsc-search-box * {
+	box-sizing: initial;
+	padding-top:0;
+	padding-bottom:0;	
+}
+
+.gsc-input-box td {
+}
+.gsc-search-box a {
+	height: auto;
+	width: auto;
+	line-height: normal;
+	padding-left:0;
+	padding-right:0;
 }
