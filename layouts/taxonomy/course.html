@@ -17,10 +17,13 @@
 		</div>
 		<div class="row no-margin">
 		  {{end}}
+		  <!--<div class="col s12 m6 l3 collection no-margin" align="center" style="padding: 0px">-->
 		  <div class="col s12 m6 l3">
-		    <h5 align="center">
-			  <a href="{{ .Permalink }}">{{ .Title }}</a>
-			 </h5>
+ 		    <div class="card hoverable darken-1">
+		      <div class="card-content" align="center">
+			    <a class="truncate" href="{{ .Permalink }}">{{ .Title }}</a>
+			  </div>
+			</div>
 		  </div>
 	  {{ end }}				
 		</div>

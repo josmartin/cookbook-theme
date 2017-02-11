@@ -86,6 +86,7 @@ a.sitename:hover {
 
 div.no-margin {
 	margin-bottom: 0px;
+	padding: 0px;
 }
 
 .search {
