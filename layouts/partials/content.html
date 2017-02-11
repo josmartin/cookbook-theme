@@ -6,8 +6,8 @@
 <div class="row">
   {{ end }}
   <div class="col m4 s12">
-    <div class="card-panel">
-      <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+    <div class="card-panel green lighten-5 hoverable">
+      <a class="flow-text" href="{{ .Permalink }}">{{ .Title }}</a>
       <p>
       {{if .Params.courses }}
         {{ range $index, $course := .Params.courses }}
