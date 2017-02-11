@@ -1,0 +1,29 @@
+{{ $baseurl := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+
+
+  <div class="container">
+    <div class="section">
+		<div class="row">
+		  <div class="col s12">
+			<h4 align="center">{{.Title}}</h4>
+		  </div>
+		</div>
+		
+		<div class="row no-margin">
+		{{ range $index, $page := .Data.Pages.ByTitle  }}
+		  {{ if and (modBool $index 4) (ne $index 0) }}
+		</div>
+		<div class="row no-margin">
+		  {{end}}
+		  <div class="col s12 m6 l3">
+		    <h5 align="center">
+			  <a href="{{ .Permalink }}">{{ .Title }}</a>
+			 </h5>
+		  </div>
+	  {{ end }}				
+		</div>
+  	  </div>
+    </div>
+{{ partial "footer.html" . }}

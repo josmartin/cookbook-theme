@@ -84,6 +84,10 @@ a.sitename:hover {
 	clear:both;
 }
 
+div.no-margin {
+	margin-bottom: 0px;
+}
+
 .search {
 }
 
