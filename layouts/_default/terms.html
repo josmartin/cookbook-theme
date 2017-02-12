@@ -6,9 +6,12 @@
   <div class="container">
     <div class="section">
 
-    <div class="collection">
+    <div class="collection course-list small-flow-text" >
       {{ range $key, $value := .Data.Terms }}
-        <a href="{{$baseurl}}/{{ $data.Plural }}/{{ $key | urlize }}" class="collection-item  blue-text">{{ if eq $data.Plural "tags"}}<i class="mdi-action-loyalty left"></i>{{else}}<i class="mdi-action-perm-media left"></i>{{end}}{{ $key }}<div class="secondary-content blue-text">{{ len $value }}</div></a>
+        <a href="{{$baseurl}}/{{ $data.Plural }}/{{ $key | urlize }}" class="collection-item  blue-text">
+        <i class="material-icons left">chevron_right</i>
+        {{ $key }}<div class="secondary-content blue-text">{{ len $value }}</div>
+        </a>
       {{ end }}
     </div>
 
