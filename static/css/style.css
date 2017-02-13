@@ -118,6 +118,7 @@ a.sitename:hover {
 
 .small-flow-text {
     font-size: 14pt;
+    text-align: left;
 }
 
 .recipe-grid:hover {
