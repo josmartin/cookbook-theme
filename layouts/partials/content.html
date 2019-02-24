@@ -17,10 +17,10 @@
       </p>
       <p>{{ .Summary }}</p>
       <p>
-      {{ .Date.Format "2 Jan 2006" }}
+      <i>{{ .Date.Format "2 Jan 2006" }}</i>
       {{if .Params.tags }}
         {{ range $index, $tag := .Params.tags }}
-          <a href="{{$baseurl}}/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
+          <span style="float:right;"><a href="{{$baseurl}}/tags/{{ $tag | urlize }}/">#{{ $tag }}&nbsp;</a></span>
         {{ end }}
       {{end}} 
       </p>
