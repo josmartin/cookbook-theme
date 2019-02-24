@@ -30,11 +30,12 @@ are on the same line otherwise the code does NOT format correctly
 			  </div>
 			</div>
 		  {{ end }}
+		  <h5>Method</h5>
           <p>{{ .Content }}</p>
-          <p>{{ .Date.Format "2 Jan 2006" }}
+          <p><i>{{ .Date.Format "2 Jan 2006" }}</i>
             {{if .Params.tags }}
               {{ range $index, $tag := .Params.tags }}
-                <a href="{{$baseurl}}/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
+                <a href="{{$baseurl}}/tags/{{ $tag | urlize }}/">#{{ $tag }}&nbsp;</a>
               {{ end }}
             {{end}}
           </p>
