@@ -11,7 +11,7 @@
           <p>
           {{if .Params.courses }}
             {{ range $index, $course := .Params.courses }}
-              <a href="{{$baseurl}}/courses/{{ $course | urlize }}/">{{ $course }}</a>
+              <a href="{{$baseurl}}/courses/{{ $course | urlize }}/">{{ $course }}</a>&nbsp;&nbsp;  
             {{ end }}
           {{end}} 
           </p>
@@ -28,14 +28,18 @@ are on the same line otherwise the code does NOT format correctly
 {{ end }}</code></pre>
 			  </div>
 			</div>
-		  {{ end }}
 		  <h2>Method</h2>
+		  {{ end }}
           <p>{{ .Content }}</p>
           <p><i>{{ .Date.Format "2 Jan 2006" }}</i>
             {{if .Params.tags }}
+              <br>
               {{ range $index, $tag := .Params.tags }}
                 <a href="{{$baseurl}}/tags/{{ $tag | urlize }}/">#{{ $tag }}&nbsp;</a>
               {{ end }}
+            {{end}}
+            {{if .Params.contributor }}
+              <br>{{.Params.contributor}}
             {{end}}
           </p>
           {{ with .Site.DisqusShortname }}

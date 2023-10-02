@@ -1,0 +1,20 @@
+{{ $baseurl := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+
+{{ $data := .Data }}
+  <div class="container">
+    <div class="section">
+
+    <div class="collection course-list small-flow-text" >
+      {{ range $key, $value := .Data.Terms }}
+        <a href="{{$baseurl}}/{{ $data.Plural }}/{{ $key | urlize }}" class="collection-item  blue-text">
+        <i class="material-icons left">chevron_right</i>
+        {{ .Page.Title }}<div class="secondary-content blue-text">{{ len $value }}</div>
+        </a>
+      {{ end }}
+    </div>
+
+    </div>
+  </div>
+{{ partial "footer.html" . }}
